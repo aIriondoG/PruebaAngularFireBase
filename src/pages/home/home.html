@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addSong()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+ <ion-list>
+    <ion-card *ngFor="let song of songs | async" (click)="showOptions(song.id, song.title)">
+        <img src="../../assets/imgs/{{song.title}}.jpg"/>
+        <div text-center class="card-title"> {{song.title}}</div>
+        <div text-center class="card-subtitle">{{song.value}} veces escuchada</div>
+      </ion-card>
+    
+    <!--<ion-list *ngFor="let song of songs | async" (click)="showOptions(song.id, song.title)">
+      {{song.title}}
+    </ion-list>-->
+ </ion-list>
+</ion-content>

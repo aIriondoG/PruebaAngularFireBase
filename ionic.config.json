@@ -1,0 +1,8 @@
+{
+  "name": "PruebaAngularFirebase",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
